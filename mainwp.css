@@ -1,0 +1,181 @@
+/* fix api icon color */
+
+.mainwp-api-icon {
+    color: var(--green-color) !important;
+}
+
+/* hide google analytics on main overview */
+
+#widget-advanced-google-widget {
+	display: none;
+}
+.mainwp-individual-site-overview #widget-advanced-google-widget {
+	display: block;
+}
+
+/* hide padding under google analytic graph (breaks line) */
+
+#mainwp-ga-data-content {
+	margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+/* hide google analytics details (graph is enough) */
+#mainwp-ga-details-data-table {
+	display: none;
+}
+
+/* fix width google analytics blocks on small screens */
+
+#mainwp-ga-details-data-table table,
+#mainwp-ga-details-data-table tr,
+#mainwp-ga-details-data-table td {
+    display: block;	
+}
+
+#mainwp-ga-details-data-table th
+{
+    display: none;
+}
+
+#mainwp-ga-details-data-table tr {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 1em 0.5em;
+}
+
+#mainwp-ga-details-data-table td {
+	width: 100%
+}
+
+#mainwp-ga-details-data-table td:nth-child(1)::before {
+    content: "Visits: ";
+}
+#mainwp-ga-details-data-table td:nth-child(3)::before {
+    content: "Users: ";
+}
+#mainwp-ga-details-data-table td:nth-child(4)::before {
+    content: "New Users: ";
+}
+#mainwp-ga-details-data-table td:nth-child(5)::before {
+    content: "Pages/Visit: ";
+}
+#mainwp-ga-details-data-table td:nth-child(6)::before {
+    content: "Bounce rate: ";
+}
+#mainwp-ga-details-data-table td:nth-child(7)::before {
+    content: "Pageviews: ";
+}
+#mainwp-ga-details-data-table td:nth-child(8)::before {
+    content: "Session time: ";
+}
+
+/* non-mainwp changes table width broke small screen length */
+	
+#mainwp-non-mainwp-changes-table {
+    table-layout: fixed;
+}
+
+/* decrease lighthouse score font */
+
+#mainwp-lighthouse-strategy-desktop .mainwp-lighthouse-score,
+#mainwp-lighthouse-strategy-mobile .mainwp-lighthouse-score {
+	font-size: 1em;
+}
+
+.mainwp-ui input#mainwp_cloudways_api_key {
+	-webkit-text-security: disc !important;
+	text-security: disc !important;
+}
+
+/* lighthouse doesnt break whitespace */
+
+h4.ui.header {
+	white-space: nowrap !important;
+}
+
+#mainwp-lighthouse-strategy-desktop .ui[class*="four column"].grid > .row > .column, .ui[class*="four column"].grid > .column:not(.row) {
+    width: 24%;
+}
+
+/* custom code snippets remove warning */
+
+#mainwp-custom-dashboard-extension .ui.yellow.message {
+	display:none;
+}
+
+/* remove update everything button */
+
+#mainwp-update-everything-button {
+	display: none;
+}
+
+.ui.horizontal.divider {
+	color: darkgray !important;
+}
+
+/* make check icon smaller */
+
+.ui.segment.mainwp-widget .green.check.icon {
+	font-size: 24px;
+}
+
+/* resize huge numbers */
+
+.ui.horizontal.statistic .value {
+	font-size: 1em;
+}
+
+.ui.large.statistic.horizontal .value {
+	font-size: 1em;
+}
+
+.ui.horizontal.statistics.large .green.statistic .value {
+	font-size: 1em;	
+}
+	
+
+/* remove thumbs up icon */
+
+.recent_comments_approved .folder.open.outline.icon::before {
+	display: none;
+}
+
+.thumbs.up.outline.icon::before {
+	display: none;
+}
+
+.info.circle.icon::before {
+	display: none;
+}
+
+/* adjust divider spacing */
+
+.ui.section.divider {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.ui.divider:not(.vertical):not(.horizontal) {
+	border-top: 0;
+	border-bottom: 0;
+}
+
+/* adjust connect icon */
+
+.mainwp-status-cell .circular.inverted.green.check.icon{
+	font-size: 8px;
+}
+
+/* auto sized table cells */
+
+.ui.stackable.grid td {
+    width: 1px;
+    white-space: nowrap;
+	text-align: left;
+}
+
+/* hide the tooltip popups */
+
+.mainwp-ui [data-tooltip]:before,
+.mainwp-ui [data-tooltip]:after { display: none !important; }
